@@ -1,0 +1,15 @@
+<form class="form example-form" [formGroup]="myForm" (submit)="handleSubmit()">
+  <mat-form-field class="example-full-width">
+    <mat-label>First Name</mat-label>
+    <input matInput placeholder="First name" formControlName="userFirstName">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Last Name</mat-label>
+    <input matInput placeholder="Last name" formControlName="userLastName">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Email" formControlName="userEmail">
+  </mat-form-field>
+  <button mat-fab color="primary" [disabled]="formDisabled" type="submit">Submit</button>
+</form>
