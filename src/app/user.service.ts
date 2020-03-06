@@ -3,5 +3,11 @@ import { Subject } from 'rxjs';
 
 @Injectable()
 export class UserService {
-  subj = new Subject();
+  private state = new Subject();
+  get getState$() {
+    return this.state.asObservable();
+  }
+  set newState(data) {
+    this.state.next(data);
+  }
 }

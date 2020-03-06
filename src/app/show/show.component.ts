@@ -18,7 +18,7 @@ export class ShowComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-    this.userService.subj.pipe(
+    this.userService.getState$.pipe(
       untilComponentDestroyed(this)
     ).subscribe(({userFirstName, userLastName, userEmail}) => {
       this.firstName = userFirstName;

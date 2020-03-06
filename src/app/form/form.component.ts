@@ -27,7 +27,7 @@ export class FormComponent implements OnInit {
   }
 
   private handleSubmit() {
-    this.userService.subj.next(this.myForm.value);
+    this.userService.newState = this.myForm.value;
   }
 
 }
